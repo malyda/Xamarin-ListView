@@ -18,9 +18,9 @@ namespace ListViewWithFileSource
         public InfoPage(Person person)
         {
             InitializeComponent();
-            NameLabel.Text = person.Surname;
-            SurnameLabel.Text = person.Lastname;
-            AgeLabel.Text = person.Age.ToString();
+            NameLabel.Text = person.GetName;
+          
+            AgeLabel.Text = person.Age+ " years old";
         }
     }
 }
