@@ -25,7 +25,6 @@
                  <ColumnDefinition Width="*"></ColumnDefinition>
                  <ColumnDefinition Width="5*"></ColumnDefinition>
                </Grid.ColumnDefinitions>
-               
                <Label Text="{Binding GetName}" FontAttributes="Bold" Grid.Row="0" Grid.Column="1" VerticalTextAlignment="End" ></Label>
                <Label Text="{Binding Age}" Grid.Row="1"  Grid.Column="1" FontSize="11" VerticalTextAlignment="Start"  />
                <abstractions:CircleImage  Source="{Binding ProfilePhoto}" WidthRequest="95" HeightRequest="95" HorizontalOptions="Center" Aspect="AspectFill" Grid.Column="0" Grid.RowSpan="2" Margin="5"></abstractions:CircleImage>
