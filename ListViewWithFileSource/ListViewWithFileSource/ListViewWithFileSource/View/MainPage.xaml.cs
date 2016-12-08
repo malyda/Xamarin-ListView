@@ -27,7 +27,6 @@ namespace ListViewWithFileSource
 
             string dataToWrite =  jsonHelper.SerializeObject(persons);
             ReadAndWriteData(dataToWrite);
-
         }
 
         private List<Person> CreateSampleData()
@@ -47,7 +46,6 @@ namespace ListViewWithFileSource
         {
             List<Person> persons = Task.Run( () => ReadAndWriteAsync(dataToWrite)).Result;
             SetListViewItems(persons);
-            
         }
 
         private void SetListViewItems(List<Person> persons)
@@ -68,10 +66,7 @@ namespace ListViewWithFileSource
             string DataFromFile = await jsonFileProvider.ReadDataAsync();
 
             return jsonHelper.DeserializeObject(DataFromFile);
-
-
-         
-        }
+                    }
         
     }
 }
