@@ -6,6 +6,7 @@
   <AbsoluteLayout>
     <abstractions:CircleImage
       Source="homer4.png"
+      x:Name="ProfilePicture"
       Aspect="AspectFit"
       BorderColor="#808080"
       BorderThickness="1"
