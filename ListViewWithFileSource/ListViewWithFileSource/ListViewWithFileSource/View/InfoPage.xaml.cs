@@ -20,6 +20,7 @@ namespace ListViewWithFileSource
             InitializeComponent();
             NameLabel.Text = person.GetName;
             AgeLabel.Text = person.Age.ToString();
+            ProfilePicture.Source = person.ProfilePhoto;
         }
     }
 }
