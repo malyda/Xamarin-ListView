@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:abstractions="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             x:Class="ListViewWithFileSource.InfoPage">
+  <AbsoluteLayout>
+    <abstractions:CircleImage
+      Source="homer4.png"
+      Aspect="AspectFit"
+      BorderColor="#808080"
+      BorderThickness="1"
+      AbsoluteLayout.LayoutFlags="XProportional"
+      AbsoluteLayout.LayoutBounds="0.5,15,120,120">
+    </abstractions:CircleImage>
+
+    <Label
+      HorizontalTextAlignment="Center"
+      Text="Homer Simpson"
+      x:Name ="NameLabel"
+      AbsoluteLayout.LayoutBounds="0,140,1,40"
+      AbsoluteLayout.LayoutFlags="XProportional,WidthProportional">
+    </Label>
+    <BoxView
+      Color="Teal"
+      AbsoluteLayout.LayoutBounds="0,180,1,1"
+      AbsoluteLayout.LayoutFlags="XProportional,WidthProportional">
+    </BoxView>
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center" AbsoluteLayout.LayoutBounds="0,180,1,1"
+      AbsoluteLayout.LayoutFlags="XProportional,WidthProportional">
+      <Label x:Name="AgeLabel"></Label>
+    </StackLayout>
+  </AbsoluteLayout>
+    </ContentPage>
