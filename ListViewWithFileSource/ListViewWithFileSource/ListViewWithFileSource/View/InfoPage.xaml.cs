@@ -19,8 +19,7 @@ namespace ListViewWithFileSource
         {
             InitializeComponent();
             NameLabel.Text = person.GetName;
-          
-            AgeLabel.Text = person.Age+ " years old";
+            AgeLabel.Text = person.Age.ToString();
         }
     }
 }
