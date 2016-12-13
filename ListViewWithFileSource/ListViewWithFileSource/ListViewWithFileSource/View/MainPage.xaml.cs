@@ -24,15 +24,21 @@ namespace ListViewWithFileSource
             InitializeComponent();
 
             List<Person> persons = CreateSampleData();
+            SetListViewItems(persons);
 
-            string dataToWrite =  jsonHelper.SerializeObject(persons);
-            ReadAndWriteData(dataToWrite);
+           /* string dataToWrite =  jsonHelper.SerializeObject(persons);
+            ReadAndWriteData(dataToWrite);*/
         }
 
         private List<Person> CreateSampleData()
         {
             List<Person> persons = new List<Person>();
-            for (int i = 0; i < 10; i++) persons.Add(new Person() { Lastname = "Jméno" + i, Surname = "Přijmení" + i, Age = i + 20 });
+            persons.Add(new Person() { Lastname = "Jan", Firstname = "Valentýn", DateOfBirth = new DateTime(1980 + 20, 1, 1) });
+            persons.Add(new Person() { Lastname = "Benedikt", Firstname = "Vojtěch", DateOfBirth = new DateTime(1980 + 11, 1, 1) });
+            persons.Add(new Person() { Lastname = "Vern", Firstname = "Argento", DateOfBirth = new DateTime(1980 + 13, 1, 1) });
+            persons.Add(new Person() { Lastname = "Caroline", Firstname = "Erben", DateOfBirth = new DateTime(1980 + 5, 1, 1) });
+            persons.Add(new Person() { Lastname = "Elton", Firstname = "Saas", DateOfBirth = new DateTime(1980 + 20, 1, 1) });
+            // for (int i = 0; i < 10; i++) persons.Add(new Person() { Lastname = "Jméno" + i, Firstname = "Přijmení" + i, DateOfBirth = new DateTime(1980+i,1,1) });
             return persons;
         }
 
@@ -52,6 +58,11 @@ namespace ListViewWithFileSource
         {
             PeopleListViewNotFormatted.ItemsSource = persons;
 
+           
+
+
+
+
             foreach (Person person in persons)
             {
                 person.ProfilePhoto = imageSource;
@@ -59,6 +70,8 @@ namespace ListViewWithFileSource
 
             PeopleListViewFormatted.ItemsSource = persons;
         }
+
+
         private async Task<List<Person>> ReadAndWriteAsync(string dataToWrite)
         {
 
