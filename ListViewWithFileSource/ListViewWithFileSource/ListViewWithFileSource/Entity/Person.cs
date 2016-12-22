@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 using Xamarin.Forms;
 
-namespace ListViewWithFileSource
+namespace ListViewWithFileSource.Entity
 {
    public class Person
     {
@@ -13,13 +14,11 @@ namespace ListViewWithFileSource
         public string Lastname { get; set; }
         public string Firstname { get; set; }
 
-        public int Age
-        {
-            get { return DateTime.Now.Year - DateOfBirth.Year; }
-        }
+        public int Age => DateTime.Now.Year - DateOfBirth.Year;
 
         public DateTime DateOfBirth { get; set; }
 
+        [JsonIgnore]
         public ImageSource ProfilePhoto { get; set; }
 
         public string GetName => Lastname + " " + Firstname;
