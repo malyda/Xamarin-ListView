@@ -13,7 +13,10 @@ namespace ListViewWithFileSource
         {
             // The root page of your application
 
+            // OR Listview Binding
             MainPage = new NavigationPage(new View.MainPage());
+            // OR Listview Binding
+            MainPage = new NavigationPage(new View.BindingListview());
         }
 
         protected override void OnStart()
